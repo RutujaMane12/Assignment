@@ -1,0 +1,29 @@
+let array=[1,4,6,7,9,5,2,44,75,65];
+let displayOddNumbers=array.filter(n=>n%2!==0)
+console.log(displayOddNumbers)
+
+let displayEvenNumbers=array.filter(n=>n%2==0)
+console.log(displayEvenNumbers)
+
+function filterFunction(array,func){
+    resultArray=[];
+    for(let i=0;i<array.length;i++){
+        if(func(array[i])){
+            resultArray.push(array[i]);
+        }
+    }
+console.log(resultArray)
+}
+
+console.log('prime numbers in the input array are:')
+filterFunction(array,x=>{
+    if(x<=1){
+        return false
+    }
+    for(let i=2;i<x;i++){
+        if(x%i==0){
+            return false
+        }
+    }
+    return true
+})

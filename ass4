@@ -1,0 +1,25 @@
+function GetVideo(){
+    return new Promise(()=>{
+        setTimeout(()=>{
+            console.log("get video")
+        },2000)
+    })
+}
+function AddIntro(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("Intro added")
+        },2000)
+    })
+}
+
+function AddSummary(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log("Summary added")
+        },2000)
+    })
+}
+GetVideo();
+AddIntro();
+AddSummary();
