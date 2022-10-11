@@ -1,0 +1,53 @@
+<!-- 2.	Create an HTML5 page as follows: 
+a.	Two empty <div> elements. The id of each must be div1 and div2 respectively. 
+b.	Two textboxes without ids. 
+c.	Two textareas without ids. 
+d.	A button titled Apply Style to TextBoxes. When this button is clicked, draw a red border around each textarea. 
+e.	A button titled Apply Style to first div . When this button is clicked, write some text only inside the first <div> element. 
+f.	A button titled Say Hello. When this button is clicked, each textbox and textarea must contain the text HELLO.  -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <input type="text"><br><br>
+    <input type="text"><br><br>
+    <div id="div1" style="height: 20px; width:400px ;background-color:rgb(123, 217, 225); padding: 10px;"></div><br><br>
+    <div id="div2" style="height: 20px; width:400px ;background-color:rgb(214, 138, 247); padding: 10px;"></div><br><br>
+    <div id="div3">
+        <textarea rows="5" cols="100"></textarea><br><br>
+        <textarea rows="5" cols="100"></textarea><br><br>
+    </div>
+
+    <button type="button" id="btn">Apply Style to TextBoxes</button>
+    <button type="button" id="bn1">Apply Style to first div </button>
+    <button type="button" id="bn2">Say Hello </button>
+
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('textarea').css({ "border": "solid 3px red" });
+            })
+        })
+
+        $(function () {
+            $('#bn1').click(function () {
+                $('#div1').text('This is first div.');
+            });
+        });
+
+        $(function () {
+            $('#btn2').click(function () {
+                $('textarea').text('Say Hello!');
+            });
+        });
+    </script>
+</body>
+
+</html>

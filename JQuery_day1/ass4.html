@@ -1,0 +1,42 @@
+<!-- 4.	Create a style class and name it error, give its border color as red and background color as yellow. Apply this class to a text box when the focus is moved out of it and if the entered data is more than 10 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        .error {
+            border-color: red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="demo" placeholder="enter a number">
+    <script>
+        // function callme(){
+        // var data = $('#demo').val();
+        // if (parseInt(data) > 10) {
+        //         $('#demo').addClass("error");
+        //     }
+        // };
+
+        // $(function () {
+        //     callme();
+        //     $('#demo').focusout(function () {
+        //         $(this).addClass("error");
+        //     });
+        // });
+       
+
+        $(function () {
+            $('#demo').focusout(function () {
+                $(this).addClass("error");
+            });
+        });
+    </script>
+</body>
+
+</html>
