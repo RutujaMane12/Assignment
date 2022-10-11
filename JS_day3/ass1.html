@@ -1,0 +1,43 @@
+<!--1.	Create an HTML page containing two textboxes for inputting the username & password respectively. Add a button titled Sign In. On the button click, invoke a JS function which checks if the username and password are citiustech (case insensitive match) and if so, redirects them to www.google.com in a new window without a menu bar and address bar. If the username and/or password is not citiustech, then an error message in dark red color must be displayed beneath the appropriate textbox displaying a suitable error message. 
+-->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Sign In</title>
+    <style>
+        #InvalidMsg{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        name :<input type="text" id='un' placeholder="enter username." required>
+        pwd :<input type="password" id='pd' placeholder="enter password." required>
+       
+        <input type="button" id="button" value='sign in'onclick="validateForm()"><br>
+        <h1 id="InvalidMsg"></h1>
+        <script>
+             function validateForm()
+{
+    let n = document.getElementById('un').value;
+    let p = document.getElementById('pd').value;
+    
+    var nm = n.toLowerCase();
+    var pd = p.toLowerCase();
+
+    if (nm=='citiustech' && pd=='citiustech') {
+        window.open("https://www.google.com/",' ', 'toolbar = no','menubar=no');
+    }
+    else
+    {
+        InvalidMsg.innerHTML="Invalid credentials..";
+    }
+}
+        </script>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "addEmail">
+    <label>1st Email</label>  
+    <input type="text" id="emailid1" name="Email id">
+    <input type ="button" id = "button1" value="Add another email" name="Add another email">
+    </div>
+    <div id = "removeEmail">
+    <label>2nd Email</label>
+    <input type="text" id="emailid2" name="Email id">
+    <input type ="button" id = "button2" value="Remove email" name="Remove email">
+    </div>
+    <script>
+        
+document.getElementById("removeEmail").style.display = 'none'
+document.querySelector("#button1").addEventListener('click',function(){
+    document.getElementById('removeEmail').style.display = 'block'
+})
+document.querySelector("#button2").addEventListener('click',function(){
+    document.getElementById('removeEmail').style.display = 'none'
+})
+
+    </script>
+</body>
+</html>

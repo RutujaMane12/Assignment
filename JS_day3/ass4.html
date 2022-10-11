@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="myCountryName">Country:</label>
+        <select name="countryName" id="myCountryName">
+            <option value="select country">Select country</option>
+            <option value="India">India</option>
+            <option value="Australia">Australia</option>
+            <option value="Newzland">Newzland</option>
+            <option value="England">England</option>
+        </select>
+        <br>
+        <select name="IndiaName" id="indiaCountry" style="display: none;">
+            <option value = "select city">Select city</option>
+            <option value = "Hyderabad">Hyderabad</option>
+            <option value = "Bangalore">Bangalore</option>
+            <option value = "Mumbai">Mumbai</option>
+            <option value = "Pune">Pune</option>
+            <option value = "Delhi">Delhi</option>
+        </select>
+        <select name="AustraliaName" id="AustraliaCountry" style="display: none;">
+            <option value = "select city">Select city</option>
+            <option value = "Malborne">Malborne</option>
+            <option value = "Sydney">Sydney</option>
+            <option value = "Perth">Perth</option>
+            <option value = "Brisbane">Brisbane</option>
+            <option value = "Canberra">Canberra</option>
+        </select>
+        <select name="NewzlandName" id="NewzlandCountry" style="display: none;">
+            <option value = "select city">Select city</option>
+            <option value = "Wellington">Wellington</option>
+            <option value = "Auckland">Auckland</option>
+            <option value = "Hamilton">Hamilton</option>
+            <option value = "Waihake">Waihake</option>
+            <option value = "Christ">Christ</option>
+        </select>
+        <select name="EnglandName" id="EnglandCountry" style="display: none;">
+            <option value = "select city">Select city</option>
+            <option value = "London">London</option>
+            <option value = "Oxford">Oxford</option>
+            <option value = "Manchester">Manchester</option>
+            <option value = "Liverpool">Liverpool</option>
+            <option value = "Leichester">Leichester</option>
+        </select>
+    </form>
+    <script>
+        
+var countryIndia = document.getElementById("indiaCountry");
+var countryAustralia = document.getElementById("australiaCountry");
+var countryNewzland = document.getElementById("newzlandCountry");
+var countryEngland = document.getElementById("englandCountry");
+
+document.getElementById("myCountryName").addEventListener("click",function(){
+    let countryName = document.querySelector("#myCountryName").value;
+
+    if(countryName == "India"){
+        countryIndia.style.display = "block";
+        countryAustralia.style.display = "none";
+        countryEngland.style.display = "none";
+        countryNewzland.style.display = "none";
+    }
+    else if(countryName == "Australia"){
+        countryAutralia.style.display = "block";
+        countryEngland.style.display = "none";
+        countryIndia.style.display = "none";
+        countryNewzland.style.display = "none";
+    }
+    else if(countryName == "England"){
+        countryAutralia.style.display = "none";
+        countryEngland.style.display = "block";
+        countryIndia.style.display = "none";
+        countryNewzland.style.display = "none";
+    }
+    else if(countryName == "Newzland"){
+        countryAutralia.style.display = "none";
+        countryEngland.style.display = "none";
+        countryIndia.style.display = "none";
+        countryNewzland.style.display = "block";
+    }
+})
+
+    </script> 
+</body>
+</html>
